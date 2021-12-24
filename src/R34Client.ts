@@ -1,7 +1,12 @@
-import { AliasTag, AnyTag, api, ApiVersion, Artist, tagUtils } from "r34-types"
+import { AliasTag, AnyTag, api, ApiVersion, Artist } from "r34-types"
 import { getSupertags, init } from "./firebase"
 import firebase from "firebase"
-import { asString, createSearchParams, ParamsRecord } from "./utils"
+import { createSearchParams, ParamsRecord } from "./utils"
+import {
+  serializeTagname,
+  isSuggestionError,
+  serializeAllTags,
+} from "./tagUtils"
 
 /**
  * Configure your client.
@@ -134,7 +139,7 @@ export class R34Client {
     const paramsInternal = { limit: this.tagLimit, ...params }
 
     if (params.name) {
-      paramsInternal.name = tagUtils.serializeTagname(params.name)
+      paramsInternal.name = serializeTagname(params.name)
     }
 
     const res = await this.fetchWithFailover("tags", paramsInternal)
@@ -146,7 +151,7 @@ export class R34Client {
     try {
       const result = await this.fetchTags(params)
 
-      if (tagUtils.isSuggestionError(result)) {
+      if (isSuggestionError(result)) {
         return result
       }
 
@@ -195,7 +200,7 @@ export class R34Client {
       }
 
       if (params.tags) {
-        paramsInternal.tags = tagUtils.serializeAllTags(params.tags)
+        paramsInternal.tags = serializeAllTags(params.tags)
       }
 
       const apiResponse = await this.fetchWithFailover(

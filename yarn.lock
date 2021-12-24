@@ -470,10 +470,10 @@ protobufjs@^6.10.0:
     "@types/node" ">=13.7.0"
     long "^4.0.0"
 
-r34-types@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/r34-types/-/r34-types-1.1.3.tgz#13ab6960ce568d8a3c25b95ccb95dd13a35cc07c"
-  integrity sha512-mfwUBSAd259tjKI9+gkG08C6hNDfjds3Okst9Fnpk9D0RlIamlSjVWXyu/V9rRVaiHRLXbVU64yHwa3NpSPEVw==
+r34-types@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/r34-types/-/r34-types-1.1.6.tgz#ed1cea0de3317c831e8b71a741e11dfbb81ca564"
+  integrity sha512-gmv9lSIfg0ABo0ie9iP0NGui7nx2KQ4e3XggrEcnz14Pg4mR00ObJ8WFC9P9Cp6WZWBF/FypAzFzypJShxfiow==
 
 require-directory@^2.1.1:
   version "2.1.1"

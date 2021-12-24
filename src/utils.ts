@@ -1,3 +1,13 @@
+import {
+  TagType,
+  Tag,
+  TagModifier,
+  BiasedTag,
+  Supertag,
+  TagsError,
+  QueryTag,
+} from "r34-types"
+
 export type ParamsRecord = Record<string, string | number | boolean>
 
 export const asString = (value: any): string =>

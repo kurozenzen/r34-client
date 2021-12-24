@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "commonjs",
     "declaration": true,
     "declarationMap": true,
@@ -13,6 +13,6 @@
     "allowJs": false,
     "lib": ["dom", "esnext"]
   },
-  "include": ["src", "../r34-react/src/hooks/useFirebaseAuthState.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }
