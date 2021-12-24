@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "lib": ["dom", "esnext"]
+  },
+  "include": ["src", "../r34-react/src/hooks/useFirebaseAuthState.ts"],
+  "exclude": ["node_modules", "dist"]
+}
